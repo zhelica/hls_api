@@ -11,5 +11,10 @@ import java.util.Map;
  */
 @Mapper
 public interface UserMapper {
+    //1.同步科室
     List<Map<String,Object>> synDepartment();
+    //4.同步出院病人
+    String af_zy_pat(Map<String,Object> map);
+    //5.同步遗嘱信息
+    String af_zy_med(Map<String,Object> map);
 }

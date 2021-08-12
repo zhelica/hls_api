@@ -15,11 +15,9 @@ public class HttpResult extends HashMap<String, Object>{
      */
     public static HttpResult error(String msg)
     {
-        Map<String, Object> params = new HashMap<String, Object>();
         HttpResult json = new HttpResult();
-        params.put("respDesc", msg);
-        params.put("respCode", "-9999");
-        json.put("params", params);
+        json.put("respDesc", msg);
+        json.put("respCode", "-9999");
         return json;
     }
     /**
@@ -31,12 +29,10 @@ public class HttpResult extends HashMap<String, Object>{
      */
     public static HttpResult success(String msg,Object result)
     {
-        Map<String, Object> params = new HashMap<String, Object>();
         HttpResult json = new HttpResult();
-        params.put("respDesc", msg);
-        params.put("result", result);
-        params.put("respCode", "0");
-        json.put("params", params);
+        json.put("respDesc", msg);
+        json.put("result", result);
+        json.put("code", "0000");
         return json;
     }
 }

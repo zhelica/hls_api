@@ -4,10 +4,14 @@ spring:
   application:
     name: hls-api
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ngroute
-    username: root
-    password: root
+    #driver-class-name: com.mysql.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/ngroute
+    #username: root
+    #password: root
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost;DatabaseName=master
+    username: sa
+    password: jie1994120..
 # MyBatis配置
 mybatis:
   # 搜索指定包别名

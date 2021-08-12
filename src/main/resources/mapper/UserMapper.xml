@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hls.api.mapper.UserMapper">
-
+	<!--1.同步科室-->
 	<select id="synDepartment" resultType="java.util.HashMap">
-		SELECT * from t_user
+		SELECT * from af_per_dept
+	</select>
+	<!--1.同步出院病人-->
+	<select id="af_zy_pat" parameterType="java.util.HashMap" statementType="CALLABLE">
+		{call af_zy_pat(
+				#{a,jdbcType=VARCHAR,mode=IN},
+				#{b,jdbcType=VARCHAR,mode=IN},
+				#{c,jdbcType=VARCHAR,mode=IN},
+				#{d,jdbcType=VARCHAR,mode=IN},
+				#{result,jdbcType=VARCHAR,mode=OUT})}
+	</select>
+	<!--1.同步遗嘱信息-->
+	<select id="af_zy_med" parameterType="java.util.HashMap" statementType="CALLABLE">
+		{call af_zy_med(
+				#{a,jdbcType=VARCHAR,mode=IN}
+                   #{result,jdbcType=VARCHAR,mode=OUT})}
+	</select>
+	<!--2.同步职工信息-->
+	<select id="af_per_staff" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+		SELECT * from af_per_staff WHERE (#{staff_no} NOT LIKE '%f%') AND (#{staff_no} NOT LIKE '%CRC%')
+									 AND  (#{staff_no} NOT LIKE '%WP%') AND (#{staff_no} NOT LIKE '%WSK%')
+	</select>
+	<!--3.同步在院病人-->
+	<select id="af_per_pat" resultType="java.util.HashMap">
+		SELECT * from af_per_pat
 	</select>
 </mapper>

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
 		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hls.api.mapper.UserMapper">
+<mapper namespace="com.his.api.mapper.UserMapper">
 	<!--1.同步科室-->
 	<select id="synDepartment" resultType="java.util.HashMap">
 		SELECT * from af_per_dept

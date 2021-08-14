@@ -1,7 +1,7 @@
-package com.hls.api.controller;
+package com.his.api.controller;
 
-import com.hls.api.domain.HttpResult;
-import com.hls.api.service.IUserService;
+import com.his.api.domain.HttpResult;
+import com.his.api.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

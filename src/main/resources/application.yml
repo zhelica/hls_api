@@ -2,7 +2,7 @@ server:
   port: 7576
 spring:
   application:
-    name: hls-api
+    name: his-api
   datasource:
     #driver-class-name: com.mysql.jdbc.Driver
     #url: jdbc:mysql://localhost:3306/ngroute
@@ -15,7 +15,7 @@ spring:
 # MyBatis配置
 mybatis:
   # 搜索指定包别名
-  typeAliasesPackage: com.hls.api.domain
+  typeAliasesPackage: com.his.api.domain
   # 配置mapper的扫描，找到所有的mapper.xml映射文件
   mapperLocations: classpath*:mapper/**/*Mapper.xml
   # 加载全局的配置文件
@@ -23,5 +23,5 @@ mybatis:
 # 日志配置
 logging:
   level:
-    com.hls: debug
+    com.his: debug
     org.springframework: warn

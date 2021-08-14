@@ -1,4 +1,4 @@
-package com.hls.api.mapper;
+package com.his.api.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 

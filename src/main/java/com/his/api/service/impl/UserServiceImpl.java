@@ -1,7 +1,7 @@
-package com.hls.api.service.impl;
+package com.his.api.service.impl;
 
-import com.hls.api.mapper.UserMapper;
-import com.hls.api.service.IUserService;
+import com.his.api.mapper.UserMapper;
+import com.his.api.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

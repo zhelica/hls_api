@@ -23,9 +23,9 @@
                    #{result,jdbcType=VARCHAR,mode=OUT})}
 	</select>
 	<!--2.同步职工信息-->
-	<select id="af_per_staff" parameterType="java.util.HashMap" resultType="java.util.HashMap">
-		SELECT * from af_per_staff WHERE (#{staff_no} NOT LIKE '%f%') AND (#{staff_no} NOT LIKE '%CRC%')
-									 AND  (#{staff_no} NOT LIKE '%WP%') AND (#{staff_no} NOT LIKE '%WSK%')
+	<select id="af_per_staff" resultType="java.util.HashMap">
+		SELECT * from af_per_staff WHERE (staff_no NOT LIKE '%f%') AND (staff_no NOT LIKE '%CRC%')
+									 AND  (staff_no NOT LIKE '%WP%') AND (staff_no NOT LIKE '%WSK%')
 	</select>
 	<!--3.同步在院病人-->
 	<select id="af_per_pat" resultType="java.util.HashMap">

@@ -30,24 +30,17 @@ public class UserServiceImpl implements IUserService {
      * @return
      */
     @Override
-    public Map<String,Object> af_zy_pat(Map<String,Object> map){
-        map.put("a","");
-        map.put("b","2021.08.11");
-        map.put("c","2021.08.11");
-        map.put("d","1");
-        userMapper.af_zy_pat(map);
-        return map;
+    public List<Map<String,Object>> af_zy_pat(Map<String,Object> map){
+        return userMapper.af_zy_pat(map);
     }
     /**
      * 同步医嘱信息
      * @return
      */
     @Override
-    public Map<String,Object> af_zy_med(Map<String, Object> map) {
-        map.put("a","771713");
-        userMapper.af_zy_med(map);
+    public List<Map<String,Object>> af_zy_med(Map<String, Object> map) {
 //        String result = map.get("result") == null ? "" : String.valueOf("result");
-        return map;
+        return userMapper.af_zy_med(map);
     }
     /**
      * 同步职工信息

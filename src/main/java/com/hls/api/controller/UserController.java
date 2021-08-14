@@ -58,8 +58,7 @@ public class UserController {
         Map<String, Object> map = new HashMap<String, Object>();
         try {
             List<Map<String,Object>> resultMap = userService.af_per_staff(map);
-            map.put("a",resultMap);
-            return HttpResult.success("请求成功",map);
+            return HttpResult.success("请求成功",resultMap);
         }catch (Exception exception){
             return HttpResult.error(exception.getMessage());
         }
@@ -70,8 +69,7 @@ public class UserController {
         Map<String, Object> map = new HashMap<String, Object>();
         try {
             List<Map<String,Object>> resultMap = userService.af_per_pat();
-            map.put("a",resultMap);
-            return HttpResult.success("请求成功",map);
+            return HttpResult.success("请求成功",resultMap);
         }catch (Exception exception){
             return HttpResult.error(exception.getMessage());
         }
